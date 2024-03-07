@@ -1,0 +1,21 @@
+<!-- Input & Output -->
+<h1>Input & Output</h1>
+<div style="background-color: black; color: white; height: 300px;">
+  <h1>Parent</h1>
+
+  <h2>Data: {{parentData}}</h2>
+  <h2>Child Data: {{childData}}</h2>
+
+  <app-child [dataFromParent]="parentData" (sendToParent)="acceptDataFromChild($event)"></app-child>
+</div>
+
+<!-- Sharing Data Using a Service -->
+<h1 style="margin-top: 2em;">Sharing Data Using a Service</h1>
+<div style="display: flex; color: white; height: 300px;">
+  <div style="flex: 1; background-color: crimson;">
+    <app-one></app-one>
+  </div>
+  <div style="flex: 1; background-color: purple;">
+    <app-two></app-two>
+  </div>
+</div>
